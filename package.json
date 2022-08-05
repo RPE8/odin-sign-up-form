@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/RPE8/odin-sign-up-form#readme",
   "devDependencies": {
-    "eslint": "^8.21.0"
+    "eslint": "^8.21.0",
+    "prettier": "^2.7.1"
   }
 }
