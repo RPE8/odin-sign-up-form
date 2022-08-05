@@ -1,0 +1,22 @@
+{
+  "name": "odin-sign-up-form",
+  "version": "1.0.0",
+  "description": "Odin Sign-Up Form",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RPE8/odin-sign-up-form.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RPE8/odin-sign-up-form/issues"
+  },
+  "homepage": "https://github.com/RPE8/odin-sign-up-form#readme",
+  "devDependencies": {
+    "eslint": "^8.21.0"
+  }
+}
