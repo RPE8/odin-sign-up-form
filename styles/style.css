@@ -8,6 +8,7 @@
 	--aside-height: min(20vh, 10rem);
 	--logo-size: clamp(3rem, 20vh, calc(var(--aside-height) - 1rem));
 	--logo-header-font-size: clamp(3rem, 20vh, calc(var(--aside-height) - 1rem));
+	--h2-font-size: calc(1.5rem +  0.5vw);
 }
 
 * {
@@ -16,7 +17,12 @@
 	box-sizing: border-box;
 }
 
+body {
+	height: 100vh;
+}
+
 .wrapper {
+	height: 100%;
 	display: grid;
 	grid-template-rows: var(--aside-height) 1fr;
 }
@@ -51,4 +57,13 @@
 
 .logo-header {
 	font-size: var(--logo-header-font-size);
+}
+
+.main-container {
+	display: flex;
+	flex-direction: column;
+}
+
+h2 {
+	font-size: var(--h2-font-size);
 }
