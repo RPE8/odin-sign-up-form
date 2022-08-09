@@ -5,9 +5,9 @@
 }
 
 :root {
-	--aside-height: 10rem;
-	--logo-size: calc(var(--aside-height) / 1.2);
-	--logo-header-size: calc(var(--aside-height) / 1.5);
+	--aside-height: min(20vh, 10rem);
+	--logo-size: clamp(3rem, 20vh, calc(var(--aside-height) - 1rem));
+	--logo-header-font-size: clamp(3rem, 20vh, calc(var(--aside-height) - 1rem));
 }
 
 * {
@@ -32,6 +32,8 @@
 
 .aside-pic-image {
 	margin: 0 auto;
+	width: 100%;
+	height: auto;
 	grid-area: logo;
 }
 
@@ -48,5 +50,5 @@
 }
 
 .logo-header {
-	font-size: var(--logo-header-size);
+	font-size: var(--logo-header-font-size);
 }
