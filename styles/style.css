@@ -18,7 +18,8 @@
 	--logo-size: var(--logo-content-size);
 	--logo-header-font-size: var(--logo-content-size);
 	--quote-section-height: calc(100vh - var(--aside-height));
-	--h2-font-size: calc(1.5rem + 0.5vw);
+	--h2-font-size: min(calc(1rem + 1vw), 1.7rem);
+	--content-margin: 1rem min(1rem, 10vw);
 }
 
 * {
@@ -80,20 +81,23 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-content: center;
-}
-
-.quote-section {
-	height: var(--quote-section-height);
+	margin: var(--content-margin);
 }
 
 .quote {
 	font-size: var(--h2-font-size);
-	margin: 1rem max(1rem, 10vw);
+}
+.quote-2 {
+	margin-top: min(3vh, 3rem);
 }
 
-.quote-1 {
-	flex: 1 0 auto;
-}
 .sign-up-section {
-	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	flex: 1 1 100%;
+}
+
+.form-row {
+	display: flex;
+	flex-direction: column;
 }
