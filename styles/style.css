@@ -17,6 +17,7 @@
 	--logo-content-size: min(var(--aside-height) - 1rem, calc(1rem + max(10vmax, 10vmin)));
 	--logo-size: var(--logo-content-size);
 	--logo-header-font-size: var(--logo-content-size);
+	--quote-section-height: calc(100vh - var(--aside-height));
 	--h2-font-size: calc(1.5rem + 0.5vw);
 }
 
@@ -77,9 +78,22 @@ body {
 .content-section {
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+}
+
+.quote-section {
+	height: var(--quote-section-height);
 }
 
 .quote {
 	font-size: var(--h2-font-size);
 	margin: 1rem max(1rem, 10vw);
+}
+
+.quote-1 {
+	flex: 1 0 auto;
+}
+.sign-up-section {
+	height: 100vh;
 }
