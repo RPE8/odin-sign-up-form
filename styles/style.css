@@ -4,19 +4,20 @@
 	font-weight: bold;
 }
 
-@font-face{
+@font-face {
 	font-family: "system";
-  font-style: normal;
-  font-weight: 300;
-	src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+	font-style: normal;
+	font-weight: 300;
+	src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"),
+		local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
 }
 
 :root {
 	--aside-height: min(20vh, 10rem);
-	--logo-size: calc(1rem + min(10vw, 10vh));
-	--logo-header-font-size: calc(1rem + min(10vw, 10vh));
-	--h2-font-size: calc(1.5rem +  0.5vw);
-
+	--logo-content-size: min(var(--aside-height) - 1rem, calc(1rem + max(10vmax, 10vmin)));
+	--logo-size: var(--logo-content-size);
+	--logo-header-font-size: var(--logo-content-size);
+	--h2-font-size: calc(1.5rem + 0.5vw);
 }
 
 * {
@@ -60,7 +61,7 @@ body {
 }
 
 .logo {
-	width: var(--logo-size);
+	width: auto;
 	height: var(--logo-size);
 }
 
@@ -75,7 +76,7 @@ body {
 
 .content-section {
 	display: flex;
-	flex-direction:column;
+	flex-direction: column;
 }
 
 .quote {
