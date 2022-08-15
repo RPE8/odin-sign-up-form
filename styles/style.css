@@ -33,11 +33,11 @@
 }
 
 body {
-	height: 100vh;
 	font-family: system;
 }
 
 .wrapper {
+	box-sizing: border-box;
 	height: 100%;
 	display: grid;
 	gap: 1.25rem;
@@ -55,7 +55,6 @@ body {
 }
 
 .aside-pic-image {
-	margin: 0 auto;
 	width: 100%;
 	height: auto;
 	grid-area: logo;
@@ -87,18 +86,17 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-content: center;
-}
-
-.quote {
-	font-size: var(--h2-font-size);
-}
-.quote-2 {
-	margin-top: min(3vh, 3rem);
+	align-items: center;
 }
 
 .quote-section {
 	padding: var(--content-margin);
+	gap: min(1.5rem, 10vw);
+	text-align: center;
+}
+
+.quote {
+	font-size: 1.5rem;
 }
 
 .sign-up-section {
@@ -106,6 +104,9 @@ body {
 	flex-direction: column;
 	flex: 1 1 100%;
 	gap: 10px;
+	background-color: var(--form-bg-color);
+	padding: var(--content-margin);
+	box-shadow: rgba(167, 167, 167, 0.45) 0px 25px 20px -20px;
 }
 
 .form-row {
@@ -115,20 +116,20 @@ body {
 
 .label {
 	font-size: 0.9rem;
+	letter-spacing: 0.1rem;
 	font-weight: 700;
 	color: var(--input-label-color);
 }
 .form-wrapper {
+	height: 100%;
 	width: 100%;
-	background-color: var(--form-bg-color);
-	padding: var(--content-margin);
+	max-width: 550px;
 }
 
 .sign-up-form {
 	display: grid;
-	max-width: 500px;
-	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-	gap: 10px;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 1rem;
 }
 
 .sign-up-form > h2 {
@@ -143,4 +144,19 @@ body {
 
 .sign-up-buttons-wrapper {
 	padding: var(--content-margin);
+}
+
+.create-button {
+	width: 100%;
+	background-color: rgb(64, 99, 64);
+	border: unset;
+	padding: 1rem 1.5rem;
+	color: white;
+	font-size: 1.2rem;
+	font-weight: 600;
+	letter-spacing: 0.1rem;
+	border-radius: 0.5rem;
+}
+
+.log-in {
 }
