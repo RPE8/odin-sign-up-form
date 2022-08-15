@@ -20,6 +20,8 @@
 	--quote-section-height: calc(100vh - var(--aside-height));
 	--h2-font-size: min(calc(1rem + 1vw), 1.7rem);
 	--content-margin: 1rem min(1rem, 10vw);
+	--input-border-color: rgb(207, 207, 207);
+	--input-label-color: rgb(88, 87, 87);
 }
 
 * {
@@ -108,10 +110,16 @@ body {
 .label {
 	font-size: 0.9rem;
 	font-weight: 700;
-	color: gray;
+	color: var(--input-label-color);
 }
 
 .sign-up-form {
 	display: grid;
 	gap: 10px;
+}
+
+.input {
+	height: 1.9rem;
+	border: 1px solid var(--input-border-color);
+	border-radius: 5px;
 }
