@@ -97,6 +97,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	flex: 1 1 100%;
+	gap: 10px;
 }
 
 .form-row {
@@ -108,4 +109,9 @@ body {
 	font-size: 0.9rem;
 	font-weight: 700;
 	color: gray;
+}
+
+.sign-up-form {
+	display: grid;
+	gap: 10px;
 }
