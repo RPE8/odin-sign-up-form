@@ -16,7 +16,7 @@
 	--main-bg-color: rgb(248, 244, 244);
 	--form-bg-color: white;
 	--aside-height: min(20vh, 10rem);
-	--logo-content-size: min(var(--aside-height) - 1rem, calc(1rem + max(10vmax, 10vmin)));
+	--logo-content-size: calc(1rem + max(10vmax, 10vmin));
 	--logo-size: var(--logo-content-size);
 	--logo-header-font-size: var(--logo-content-size);
 	--quote-section-height: calc(100vh - var(--aside-height));
@@ -32,7 +32,12 @@
 	box-sizing: border-box;
 }
 
+html {
+	height: 100%;
+}
+
 body {
+	height: 100%;
 	font-family: system;
 }
 
@@ -46,22 +51,16 @@ body {
 }
 
 .aside-pic-wrapper {
-	overflow: hidden;
-	display: grid;
-	grid-template-areas: "logo";
 	grid-template-rows: var(--aside-height);
 	font-family: NorseBold;
 	color: white;
-}
-
-.aside-pic-image {
-	width: 100%;
-	height: auto;
-	grid-area: logo;
+	background-size: cover;
+	background-image: url("../assets/images/image.avif");
+	display: flex;
+	justify-content: center;
 }
 
 .logo-wrapper {
-	grid-area: logo;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -158,5 +157,94 @@ body {
 	border-radius: 0.5rem;
 }
 
+.sign-up-buttons-wrapper {
+	width: 100%;
+	display: grid;
+	place-items: center;
+	gap: 0.8rem;
+}
+
 .log-in {
+	font-weight: 700;
+}
+
+.log-in a {
+	text-decoration: none;
+	font-weight: bold;
+	color: rgb(64, 99, 64);
+}
+
+@media (min-width: 700px) {
+	:root {
+		--aside-height: 100%;
+	}
+	.wrapper {
+		grid-template-columns: 4fr 6fr;
+		grid-template-rows: 1fr;
+		gap: 0px;
+	}
+	.logo-wrapper {
+		margin-top: min(25vh, 25rem);
+		background-color: rgba(6, 6, 6, 0.45);
+	}
+
+	.aside-pic-wrapper {
+		display: block;
+	}
+
+	.main-container {
+		margin-block: min(3rem, 5%);
+	}
+
+	.content-section {
+		justify-content: start;
+		align-items: start;
+	}
+
+	.content-section > * {
+		max-width: 800px;
+		padding-left: 1rem;
+	}
+
+	.quote-section {
+		text-align: left;
+		justify-content: end;
+		align-items: start;
+		flex: 1 1 auto;
+	}
+
+	.sign-up-section {
+		flex: 0;
+	}
+
+	.form-wrapper {
+		padding-block: 2rem;
+	}
+
+	.input {
+		height: 2.2rem;
+	}
+
+	.form-row {
+		width: 100%;
+	}
+
+	.label {
+		font-size: 1.2rem;
+	}
+
+	.buttons-section {
+		flex: 1 1 auto;
+	}
+
+	.sign-up-buttons-wrapper {
+		width: auto;
+		display: grid;
+		place-items: center;
+		gap: 0.8rem;
+	}
+
+	.create-button {
+		padding: 1rem 4rem;
+	}
 }
