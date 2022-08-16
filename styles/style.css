@@ -24,6 +24,8 @@
 	--content-margin: 1rem min(1rem, 10vw);
 	--input-border-color: rgb(207, 207, 207);
 	--input-label-color: rgb(88, 87, 87);
+	--input-focus-border-color: rgb(100, 100, 232);
+	--input-focus-shadow: rgb(100, 100, 232, 0.5);
 }
 
 * {
@@ -139,6 +141,15 @@ body {
 	height: 1.9rem;
 	border: 1px solid var(--input-border-color);
 	border-radius: 5px;
+	padding: 0.5rem;
+	font-size: 1rem;
+}
+
+.input:focus,
+.input:focus-visible {
+	border: 2px solid var(--input-focus-border-color);
+	box-shadow: var(--input-focus-shadow) 0px 3px 5px;
+	outline: none;
 }
 
 .sign-up-buttons-wrapper {
@@ -230,7 +241,8 @@ body {
 	}
 
 	.label {
-		font-size: 1.2rem;
+		font-size: 1rem;
+		font-weight: bold;
 	}
 
 	.buttons-section {
