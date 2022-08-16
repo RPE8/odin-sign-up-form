@@ -34,6 +34,8 @@
 								<input
 									id="firstName"
 									type="text"
+									minlength="2"
+									maxlength="16"
 									class="input"
 									title="Enter First Name"
 									placeholder="Garry"
@@ -45,6 +47,8 @@
 								<input
 									id="lastName"
 									type="text"
+									minlength="2"
+									maxlength="16"
 									class="input"
 									title="Enter Last Name"
 									placeholder="Smith"
@@ -68,8 +72,9 @@
 									id="phoneNumber"
 									type="tel"
 									class="input"
+									pattern="[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}"
 									title="Enter Phone Number Name"
-									placeholder="+375255555555"
+									placeholder="+99(99)9999-9999"
 									required
 								/>
 							</div>
@@ -85,13 +90,7 @@
 							</div>
 							<div class="form-row">
 								<label for="confirmPassword" class="label">Confirm Password</label>
-								<input
-									id="confirmPassword"
-									type="password"
-									class="input error"
-									title="Passwords do not match"
-									required
-								/>
+								<input id="confirmPassword" type="password" class="input error" required />
 							</div>
 						</form>
 					</div>
