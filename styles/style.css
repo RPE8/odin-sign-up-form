@@ -25,6 +25,7 @@
 	--input-border-color: rgb(207, 207, 207);
 	--input-label-color: rgb(88, 87, 87);
 	--input-focus-border-color: rgb(100, 100, 232);
+	--input-error-border-color: rgb(227, 57, 69);
 	--input-focus-shadow: rgb(100, 100, 232, 0.5);
 }
 
@@ -149,6 +150,10 @@ body {
 	border: 2px solid var(--input-focus-border-color);
 	box-shadow: var(--input-focus-shadow) 0px 3px 5px;
 	outline: none;
+}
+
+.error {
+	border: 2px solid var(--input-error-border-color);
 }
 
 .sign-up-buttons-wrapper {
